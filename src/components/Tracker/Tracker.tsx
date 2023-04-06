@@ -1,11 +1,13 @@
-import HitSmall from '../../assets/HitSmall.png';
-import MissSmall from '../../assets/MissSmall.png';
 import {
   StyledImage,
   StyledMarker,
   StyledMarkerContainer,
   StyledContainer,
 } from './Tracker.styles';
+
+import HitSmall from '../../assets/HitSmall.png';
+import MissSmall from '../../assets/MissSmall.png';
+
 import { TrackerProps } from '../../types';
 
 const Tracker = ({ ship, size, count }: TrackerProps) => {

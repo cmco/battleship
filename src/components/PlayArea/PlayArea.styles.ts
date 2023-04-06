@@ -1,5 +1,7 @@
 import { styled, Box, css } from '@mui/material';
+
 import { device } from '../../theme';
+
 import { StyledTrackerContainerProps } from '../../types';
 
 export const StyledPlayAreaContainer = styled(Box)`

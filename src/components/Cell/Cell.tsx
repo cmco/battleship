@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { StyledCell, StyledMarker } from './Cell.styles';
 import HitLarge from '../../assets/Hit.png';
 import MissLarge from '../../assets/Miss.png';
+
 import { CellProps } from '../../types';
 
 const Cell = ({ id, hasShip, setShipsState, setTotalHits }: CellProps) => {

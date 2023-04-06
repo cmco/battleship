@@ -1,5 +1,6 @@
 import { styled, Box, css } from '@mui/material';
 import { device } from '../../theme';
+
 import { StyledPlayerPoints } from '../../types';
 
 export const StyledPlayerPointsContainer = styled(Box, {

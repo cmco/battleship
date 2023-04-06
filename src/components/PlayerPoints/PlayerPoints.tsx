@@ -3,6 +3,7 @@ import {
   StyledPoints,
   StyledPlayerPointsContainer,
 } from './PlayerPoints.styles';
+
 import { PlayerPointsProps } from '../../types';
 
 const PlayerPoints = ({ totalHits, playerOne }: PlayerPointsProps) => {

@@ -1,4 +1,5 @@
 import { styled, Box } from '@mui/material';
+
 import { device } from '../../theme';
 
 export const StyledTracker = styled(Box)`

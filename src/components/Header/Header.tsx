@@ -1,4 +1,3 @@
-import { IsMobile } from '../../utils';
 import {
   StyledHeaderContainer,
   StyledMainButton,
@@ -7,6 +6,8 @@ import {
   StyledSearchField,
   StyledSecondaryButton,
 } from './Header.styles';
+
+import { IsMobile } from '../../utils';
 
 const Header = () => {
   return (
