@@ -68,6 +68,10 @@ export interface StyledPlayerPoints {
   playerOne?: boolean;
 }
 
+export interface StyledTrackerContainerProps {
+  columns: number;
+}
+
 export interface PlayerPointsProps {
   totalHits: number;
   playerOne?: boolean;

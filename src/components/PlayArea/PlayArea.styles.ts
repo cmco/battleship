@@ -1,5 +1,6 @@
-import { styled, Box } from '@mui/material';
+import { styled, Box, css } from '@mui/material';
 import { device } from '../../theme';
+import { StyledTrackerContainerProps } from '../../types';
 
 export const StyledPlayAreaContainer = styled(Box)`
   display: flex;
@@ -44,16 +45,26 @@ export const StyledPlayerPointsContainer = styled(Box)`
   }
 `;
 
-export const StyledTrackerContainer = styled(Box)`
-  @media ${device.mobile} {
-    column-count: 2;
-  }
+export const StyledTrackerContainer = styled(Box, {
+  shouldForwardProp: (prop) => prop !== 'isMarked',
+})<StyledTrackerContainerProps>(
+  ({ columns }) => css`
+    @media ${device.mobile} {
+      display: grid;
+      grid-template-columns: repeat(${columns}, 1fr);
+      grid-auto-flow: column;
+      grid-template-rows: repeat(${columns}, 1fr);
+    }
 
-  @media ${device.tablet} {
-    column-count: 2;
-    width: 60%;
-  }
-`;
+    @media ${device.tablet} {
+      display: grid;
+      grid-template-columns: repeat(${columns}, 1fr);
+      grid-auto-flow: column;
+      grid-template-rows: repeat(${columns}, 1fr);
+      width: 60%;
+    }
+  `,
+);
 
 export const StyledGridContainer = styled(Box)`
   width: 54%;

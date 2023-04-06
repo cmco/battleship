@@ -69,7 +69,8 @@ const PlayArea = () => {
           <PlayerPoints playerOne totalHits={totalHits} />
           <PlayerPoints totalHits={0} />
         </StyledPlayerPointsContainer>
-        <StyledTrackerContainer>
+        <StyledTrackerContainer
+          columns={Math.ceil(Object.keys(shipsState).length / 3)}>
           {Object.keys(shipsState).map((ship) => (
             <Tracker
               ship={shipsState[ship].ship}
