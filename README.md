@@ -1,46 +1,15 @@
-# Getting Started with Create React App
+## Details
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Made with the following packages
+* MaterialUI 5
+* Styled Components
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Things to Note
+* Implied in the given mock data object are possible multiple counts of a ship (i.e. `count: 1`). With the provided data, only one count for ship exists. I have taken the liberty of assuming that in other scenarios, this may not be the case.  In light of this, the state for tracking hits on each ship has been done dynamically (see `shipsState` and its corresponding `type` of `ShipsState`). This allows for the game to render multiple copies of a ship so long that there are respective layouts for them and that it has been reflected in the `count` property inside `shipTypes`.
+* The codebase is structered to have separate folders within `src` to more neatly layout the files
+  * `components` houses component folders for all `.jsx` files along with their corresponding `.styles.ts` files
+  * `theme` houses a custom config file for the custom media query breakpoints along with all possible custom MUI configs in the future
+  * `types` houses all `type` and `interface` declarations used across the app
+  * `utils` houses utility functions (such as `isMobile()` to determine viewport size for conditional rendering) and `apiData.ts` for the mock data
+  * `assets` contains all the `.png` files used within the app
