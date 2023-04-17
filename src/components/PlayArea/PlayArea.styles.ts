@@ -55,14 +55,14 @@ export const StyledTrackerContainer = styled(Box, {
       display: grid;
       grid-template-columns: repeat(${columns}, 1fr);
       grid-auto-flow: column;
-      grid-template-rows: repeat(${columns}, 1fr);
+      grid-template-rows: repeat(3, 1fr);
     }
 
     @media ${device.tablet} {
       display: grid;
       grid-template-columns: repeat(${columns}, 1fr);
       grid-auto-flow: column;
-      grid-template-rows: repeat(${columns}, 1fr);
+      grid-template-rows: repeat(3, 1fr);
       width: 60%;
     }
   `,
