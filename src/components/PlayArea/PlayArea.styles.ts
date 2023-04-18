@@ -48,7 +48,7 @@ export const StyledPlayerPointsContainer = styled(Box)`
 `;
 
 export const StyledTrackerContainer = styled(Box, {
-  shouldForwardProp: (prop) => prop !== 'isMarked',
+  shouldForwardProp: (prop) => prop !== 'columns',
 })<StyledTrackerContainerProps>(
   ({ columns }) => css`
     @media ${device.mobile} {
